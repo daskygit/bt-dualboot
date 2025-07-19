@@ -89,7 +89,7 @@ class BluetoothDevice:
     def synced(self, other):
         if self.pairing_key:
             return self.pairing_key == other.pairing_key
-        if self.ltk and self.rand and self.ediv:
+        if self.ltk:
             return (self.ltk == other.ltk and
                     self.rand == other.rand and
                     self.ediv == other.ediv)
